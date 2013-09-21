@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import util.datastructures.TilePoint;
-import util.interfaces.DataUpdated_Listener;
+import util.interfaces.DataUpdatedListener;
 import util.interfaces.MoreLines;
 
 import models.tiles.LBlock;
@@ -469,7 +469,7 @@ public class Board {
 	 * Observer Pattern
 	 *************************************************/
 	
-	private ArrayList<DataUpdated_Listener> listeners = new ArrayList<DataUpdated_Listener>();
+	private ArrayList<DataUpdatedListener> listeners = new ArrayList<DataUpdatedListener>();
 	
 	public void notify_observers(){
 		// call this method everytime we have new date for our observers rdy.
@@ -480,11 +480,11 @@ public class Board {
 		}
 	}
 	
-	public void subscribeListener(DataUpdated_Listener l) {
+	public void subscribeListener(DataUpdatedListener l) {
 		listeners.add(l);
 	}
 	
-	public void unsubscribeListener(DataUpdated_Listener l) {
+	public void unsubscribeListener(DataUpdatedListener l) {
 		listeners.remove(l);
 	}	
 	

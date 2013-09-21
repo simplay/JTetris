@@ -3,10 +3,10 @@ package models;
 import java.util.ArrayList;
 import java.util.Timer;
 
-import util.interfaces.DataUpdated_Listener;
+import util.interfaces.DataUpdatedListener;
 import util.interfaces.Listener;
 
-public class BoardObserver implements DataUpdated_Listener{
+public class BoardObserver implements DataUpdatedListener{
 	public Board board;
 	public Timer timer;
 	public boolean timer_is_running;
