@@ -1,17 +1,25 @@
+package modelview;
+
+import interfaces.Listener;
+import interfaces.MoreLines;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import models.BoardObserver;
+import models.*;
+
 public class Controller implements Listener, MoreLines{
-	private Model model;
+	private BoardObserver model;
 	private View view;
 	private int killed_lines;
 	private int previous_killed_lines;
 	private int count = 5;
 	private volatile int speed;
 	
-	public Controller(Model model, View view){
+	public Controller(BoardObserver model, View view){
 		this.model = model;
 		this.view = view;
 

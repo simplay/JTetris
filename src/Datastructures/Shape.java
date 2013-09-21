@@ -1,4 +1,4 @@
-package Datastructures;
+package datastructures;
 
 public class Shape implements Cloneable{
 	protected int[][] shape;

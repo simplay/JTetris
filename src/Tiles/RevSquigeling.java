@@ -1,4 +1,4 @@
-package Tiles;
+package tiles;
 
 public class RevSquigeling extends Tile{
 

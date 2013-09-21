@@ -1,3 +1,4 @@
+package modelview;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -11,9 +12,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import models.BoardObserver;
+
+
 class MyPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
-	private Model model; 
+	private BoardObserver model; 
 	private int kbreite = 15;
 	
 	public void paintComponent(Graphics g) {
@@ -67,7 +71,7 @@ class MyPanel extends JPanel{
 		g.fillRect(x * kbreite + 1, y * kbreite + 1, kbreite - 1, kbreite - 1);
 	}
 	
-	public void set_model(Model model){
+	public void set_model(BoardObserver model){
 		this.model = model;	
 	}
 	
@@ -110,7 +114,7 @@ class MyPanel extends JPanel{
 
 public class View {
 	@SuppressWarnings("unused")
-	private Model model;
+	private BoardObserver model;
 	public final int MAXX ;
 	public final int MAXY ;
 	public JPanel controls;
@@ -120,7 +124,7 @@ public class View {
 	public MyPanel field;
 	public JLabel time;
 
-	public View(Model model){
+	public View(BoardObserver model){
 		this.model = model;
 		
 		

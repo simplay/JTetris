@@ -1,36 +1,16 @@
+package models;
+
 import java.util.ArrayList;
-import java.util.EventListener;
 import java.util.Timer;
-import java.util.TimerTask;
+import interfaces.*;
 
-
-class Task extends TimerTask{
-	private int counter = 0;
-	private Board board;
-	public Task(Board b){
-		board = b;
-	}
-	
-	@Override
-	public void run() {
-		board.nach_unten();	
-		counter++;
-		if(counter % 16 == 0)board.points++;
-	}
-}
-
-interface Listener extends EventListener{
-	public void handleEvent();	
-}
-
-public class Model implements DataUpdated_Listener{
+public class BoardObserver implements DataUpdated_Listener{
 	public Board board;
 	public Timer timer;
 	public boolean timer_is_running;
 	
-	public Model(){
+	public BoardObserver(){
 		board = new Board();
-		//timer = new Timer();
 		board.subscribeListener(this);
 	}
 	

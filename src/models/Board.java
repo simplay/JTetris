@@ -1,24 +1,16 @@
+package models;
 import java.util.ArrayList;
-import java.util.EventListener;
 import java.util.Random;
-
-import Datastructures.TilePoint;
-import Tiles.LBlock;
-import Tiles.LinePiece;
-import Tiles.RevLBlock;
-import Tiles.RevSquigeling;
-import Tiles.Square;
-import Tiles.Squigeling;
-import Tiles.TBlock;
-import Tiles.Tile;
-
-interface DataUpdated_Listener extends EventListener{
-	public void handleEvent();	
-}
-
-interface MoreLines extends EventListener{
-	public void handle_line_Event();	
-}
+import datastructures.TilePoint;
+import tiles.LBlock;
+import tiles.LinePiece;
+import tiles.RevLBlock;
+import tiles.RevSquigeling;
+import tiles.Square;
+import tiles.Squigeling;
+import tiles.TBlock;
+import tiles.Tile;
+import interfaces.*;
 
 public class Board {
 	private Random ran = new Random();
@@ -391,6 +383,7 @@ public class Board {
 
 
 		int i = ran.nextInt() % 7;
+				
 		switch (i) {
 		case 0:
 			current_figure = new LinePiece();

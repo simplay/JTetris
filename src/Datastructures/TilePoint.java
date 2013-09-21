@@ -1,4 +1,4 @@
-package Datastructures;
+package datastructures;
 
 public class TilePoint {
 	public int x;
