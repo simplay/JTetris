@@ -2,7 +2,9 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Timer;
-import interfaces.*;
+
+import util.interfaces.DataUpdated_Listener;
+import util.interfaces.Listener;
 
 public class BoardObserver implements DataUpdated_Listener{
 	public Board board;

@@ -1,20 +1,21 @@
-package tiles;
+package models.tiles;
 
-public class LinePiece extends Tile{
-	public LinePiece() {
-		super(1);
+public class LBlock extends Tile{
+
+	public LBlock() {
+		super(6);
 	}
-	
+
 	@Override
-	public void initShape(){
+	protected void initShape() {
 		this.shape.setXAt(0, 7);
 		this.shape.setXAt(1, 7);
 		this.shape.setXAt(2, 7);
-		this.shape.setXAt(3, 7);
+		this.shape.setXAt(3, 8);
 		
 		this.shape.setYAt(0, 1);
 		this.shape.setYAt(1, 0);
 		this.shape.setYAt(2, 2);
-		this.shape.setYAt(3, 3);
+		this.shape.setYAt(3, 2);
 	}
 }

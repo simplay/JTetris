@@ -1,14 +1,14 @@
 package modelview;
 
-import interfaces.Listener;
-import interfaces.MoreLines;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import models.BoardObserver;
+import util.interfaces.Listener;
+import util.interfaces.MoreLines;
+
 import models.*;
 
 public class Controller implements Listener, MoreLines{

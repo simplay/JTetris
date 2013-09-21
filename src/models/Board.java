@@ -1,16 +1,19 @@
 package models;
 import java.util.ArrayList;
 import java.util.Random;
-import datastructures.TilePoint;
-import tiles.LBlock;
-import tiles.LinePiece;
-import tiles.RevLBlock;
-import tiles.RevSquigeling;
-import tiles.Square;
-import tiles.Squigeling;
-import tiles.TBlock;
-import tiles.Tile;
-import interfaces.*;
+
+import util.datastructures.TilePoint;
+import util.interfaces.DataUpdated_Listener;
+import util.interfaces.MoreLines;
+
+import models.tiles.LBlock;
+import models.tiles.LinePiece;
+import models.tiles.RevLBlock;
+import models.tiles.RevSquigeling;
+import models.tiles.Square;
+import models.tiles.Squigeling;
+import models.tiles.TBlock;
+import models.tiles.Tile;
 
 public class Board {
 	private Random ran = new Random();

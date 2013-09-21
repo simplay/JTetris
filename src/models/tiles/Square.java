@@ -1,17 +1,17 @@
-package tiles;
+package models.tiles;
 
-public class Squigeling extends Tile{
+public class Square extends Tile{
 
-	public Squigeling() {
-		super(4);
+	public Square() {
+		super(3);
 	}
 
 	@Override
 	protected void initShape() {
 		this.shape.setXAt(0, 7);
 		this.shape.setXAt(1, 8);
-		this.shape.setXAt(2, 6);
-		this.shape.setXAt(3, 7);
+		this.shape.setXAt(2, 7);
+		this.shape.setXAt(3, 8);
 		
 		this.shape.setYAt(0, 0);
 		this.shape.setYAt(1, 0);

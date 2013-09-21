@@ -1,4 +1,4 @@
-package tiles;
+package models.tiles;
 
 public class RevLBlock extends Tile{
 

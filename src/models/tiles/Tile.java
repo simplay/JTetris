@@ -1,7 +1,7 @@
-package tiles;
+package models.tiles;
 
-import datastructures.Shape;
-import datastructures.TilePoint;
+import util.datastructures.Shape;
+import util.datastructures.TilePoint;
 
 public abstract class Tile {
 	protected int color;
