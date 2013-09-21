@@ -17,6 +17,7 @@ import models.tiles.Tile;
 
 public class Board {
 	private Random ran = new Random();
+	private Dice dice;
 	public int length = 16;
 	public int height = 30;
 	public int[][] field = new int[length+2][height+2];
@@ -34,6 +35,8 @@ public class Board {
 
 	
 	public Board(){
+		this.dice = new Dice();
+		
 		// initialisiere Rand mit -1
 		for(int i = 0; i < length+2; i++){
 			field[i][0] = -1;
@@ -384,7 +387,7 @@ public class Board {
 	
 	public void new_figure(){
 
-
+//		current_figure = dice.roll();
 		int i = ran.nextInt() % 7;
 				
 		switch (i) {
@@ -417,7 +420,13 @@ public class Board {
 			break;
 		}	
 		
-		
+		// incredible nasty race condition bug fix
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		lay_donw(current_figure);
 		notify_observers();

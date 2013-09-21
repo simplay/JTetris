@@ -52,6 +52,8 @@ public class Dice {
 			break;
 		}
 		
+
+		
 		return rolledFigure;
 		
 	}
